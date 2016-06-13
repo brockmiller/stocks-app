@@ -13,6 +13,12 @@ import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+injectTapEventPlugin();
+
 const lightMuiTheme = getMuiTheme(merge(lightBaseTheme,
   {
     palette: {
@@ -40,17 +46,15 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <AppBar
-          title="Stock List"
-          iconElementLeft={<IconButton onClick={this.toggleDrawer}><Menu /></IconButton>}/>
+        <AppBar title="Stock List" onLeftIconButtonTouchTap={this.toggleDrawer}/>
 
         <Drawer
           open={this.state.drawerOpen}
           docked={false}
-          onRequestChange={(drawerOpen) => this.setState({drawerOpen: drawerOpen})}>
+          onRequestChange={(drawerOpen) => this.setState({drawerOpen})}>
 
-          <MenuItem>Item 1</MenuItem>
-          <MenuItem>Item 2</MenuItem>
+          <MenuItem onClick={this.toggleDrawer}>Item 1</MenuItem>
+          <MenuItem onClick={this.toggleDrawer}>Item 2</MenuItem>
         </Drawer>
       </div>
     );
