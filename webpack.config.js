@@ -1,3 +1,7 @@
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// import ExtractTextPlugin from 'extract-text-webpack-plugin';
+
 module.exports = {
   entry: './src/app/main.js',
   output: {
@@ -10,6 +14,13 @@ module.exports = {
     // hot: true,
     port: 3000
   },
+  // resolve: {
+  //   extensions: ['', '.scss', '.css', '.js', '.json'],
+  //   modulesDirectories: [
+  //     'node_modules',
+  //     path.resolve(__dirname, './node_modules')
+  //   ]
+  // },
   module: {
     loaders: [
       {
@@ -19,7 +30,14 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /(\.scss|\.css)$/,
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass')
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin('bundle.css', { allChunks: true })
+  ]
 };
