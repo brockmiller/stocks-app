@@ -1,17 +1,19 @@
 module.exports = {
-  entry: './main.js',
+  entry: './src/app/main.js',
   output: {
-    path: '/',
-    filename: 'index.js'
+    path: './www',
+    filename: 'bundle.js'
   },
   devServer: {
+    contentBase: './www',
     inline: true,
-    port: 3333
+    // hot: true,
+    port: 3000
   },
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.js?$/,
         exclude: /node_modules/,
         loader: 'babel',
         query: {
