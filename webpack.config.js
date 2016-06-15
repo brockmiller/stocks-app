@@ -1,6 +1,5 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 module.exports = {
   entry: './src/app/main.js',
@@ -14,13 +13,13 @@ module.exports = {
     // hot: true,
     port: 3000
   },
-  // resolve: {
-  //   extensions: ['', '.scss', '.css', '.js', '.json'],
-  //   modulesDirectories: [
-  //     'node_modules',
-  //     path.resolve(__dirname, './node_modules')
-  //   ]
-  // },
+  resolve: {
+    extensions: ['', '.scss', '.css', '.js', '.json'],
+    modulesDirectories: [
+      'node_modules',
+      path.resolve(__dirname, './node_modules')
+    ]
+  },
   module: {
     loaders: [
       {
@@ -33,7 +32,13 @@ module.exports = {
       },
       {
         test: /(\.scss|\.css)$/,
+        exclude: /chartist/,
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass')
+      },
+      {
+        test: /(\.scss|\.css)$/,
+        include: /chartist/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
       }
     ]
   },
