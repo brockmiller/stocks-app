@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-polyfill": "^6.9.1",
     "chartist": "^0.9.7",
     "classnames": "^2.2.5",
+    "flexboxgrid": "^6.3.0",
     "lodash": "^4.13.1",
     "material-ui": "^0.15.0",
     "normalize.css": "^4.1.1",
@@ -19,6 +21,7 @@
     "react-addons-css-transition-group": "^15.1.0",
     "react-chartist": "^0.10.2",
     "react-dom": "^15.1.0",
+    "react-flexbox-grid": "^0.9.6",
     "react-sparklines": "^1.5.2",
     "react-tap-event-plugin": "^1.0.0",
     "react-toolbox": "^1.0.0"

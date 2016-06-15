@@ -1,7 +1,7 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-require('../../node_modules/chartist/dist/chartist.css');
+import styles from 'chartist/dist/chartist.css';
 
 let data = {
   labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
@@ -12,7 +12,7 @@ let data = {
   ]
 }
 let options = {
-  fullWidth: false,
+  fullWidth: true,
   chartPadding: {
     left: 0,
     right: 0
@@ -20,21 +20,34 @@ let options = {
   lineSmooth: Chartist.Interpolation.cardinal({
     fillHoles: true,
   }),
-  low: 0
+  showPoint: false,
+  low: 0,
+  axisX: {
+    showLabel: false,
+    showGrid: false
+  },
+  axisY: {
+    showLabel: true,
+    showGrid: true
+  }
 }
 
 class StockChart extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
   componentDidMount() {
     this.updateChart();
   }
 
   updateChart() {
-    return new Chartist.Line('.line-chart', data, options);
+    return new Chartist.Line(`.${this.props.name}`, data, options);
   }
 
   render() {
     return (
-      <div className='line-chart' style={{flex:1, 'margin-right': 10, 'margin-top': 15}}></div>
+      <div className={this.props.name}></div>
     );
   }
 }

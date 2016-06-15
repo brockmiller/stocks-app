@@ -7,7 +7,7 @@ import { IconMenu, MenuItem, MenuDivider } from 'react-toolbox';
 import { TouchButton } from './TouchButton';
 import appBarTheme from './styles/app_bar.scss';
 
-import StockChart from './StockChart';
+import ViewMain from './ViewMain';
 
 class AppContainer extends React.Component {
   constructor() {
@@ -33,8 +33,7 @@ class AppContainer extends React.Component {
           <AppBar flat theme={appBarTheme}>
             <TouchButton mini floating accent icon="menu" onClick={this.toggleDrawer}></TouchButton>
           </AppBar>
-
-          <StockChart />
+          <ViewMain />
 
         </Panel>
       </Layout>
