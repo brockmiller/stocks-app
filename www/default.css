@@ -7,3 +7,12 @@ html, head, body, p {
   margin: 0;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
 }
+
+#app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+}
