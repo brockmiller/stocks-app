@@ -1,0 +1,17 @@
+@import "~react-toolbox/lib/colors";
+
+
+// overrides
+$color-primary: $palette-indigo-a700;
+$color-primary-dark: $palette-indigo-900;
+$color-background: $palette-blue-grey-50;
+$color-accent: $palette-teal-a400;
+$color-accent-dark: $palette-teal-a700;
+
+// defaults
+$color-divider: $palette-grey-200 !default;
+$color-text: $palette-grey-900 !default;
+$color-text-secondary: $palette-grey-600 !default;
+
+$color-primary-contrast: $color-dark-contrast !default;
+$color-accent-contrast: $color-dark-contrast !default;

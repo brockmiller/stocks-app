@@ -42,6 +42,9 @@ module.exports = {
       }
     ]
   },
+  sassLoader: {
+    data: '@import "' + path.resolve(__dirname, 'src/app/styles/_theme.scss') + '";'
+  },
   plugins: [
     new ExtractTextPlugin('bundle.css', { allChunks: true })
   ]
