@@ -1,9 +1,25 @@
 @import "~react-toolbox/lib/colors";
 
+$swan-blue: #4275F4;
+$swan-blue-dark: rgba(66,101,188,1);
+$dark-blue-gray: rgba(67,92,102,1);
+
+:export {
+  swanBlue: $swan-blue;
+  swanBlueDark: $swan-blue-dark;
+  darkBlueGray: $dark-blue-gray;
+  orange100: $palette-orange-100;
+  green100: $palette-green-100;
+  greenA100: $palette-green-a100;
+  greenA200: $palette-green-a200;
+  red100: $palette-red-100;
+  redA100: $palette-red-a100;
+  redA200: $palette-red-a200;
+}
 
 // overrides
 $color-primary: $palette-indigo-a700;
-$color-primary-dark: $palette-indigo-900;
+$color-primary-dark: $swan-blue-dark;
 $color-background: $palette-blue-grey-50;
 $color-accent: $palette-teal-a400;
 $color-accent-dark: $palette-teal-a700;

@@ -10,4 +10,12 @@ TouchButton.propTypes = {
   children: PropTypes.node
 };
 
-export { TouchButton }
+const TouchIconButton = ({ children, ...props }) => (
+  <IconButton {...props} theme={theme}>{children}</IconButton>
+)
+
+TouchIconButton.propTypes = {
+  children: PropTypes.node
+};
+
+export { TouchButton, TouchIconButton }

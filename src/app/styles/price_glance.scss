@@ -1,0 +1,39 @@
+
+.container {
+  border: 3px solid rgba(white, 0.5);
+  border-radius: 50%;
+  height: 25vw;
+  width: 25vw;
+  padding: 0;
+  margin: 15px auto;
+  font-size: 1.8vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sparkline {
+  margin: 10% 1%;
+  height: auto;
+
+  > svg {
+    width: 75%;
+    height: auto;
+  }
+}
+
+.price {
+  color: white;
+}
+
+.currentPrice {
+  color: white;
+  font-size: 2.2em;
+}
+
+.deltaPrice {
+  color: gray;
+  font-size: 1.2em;
+}

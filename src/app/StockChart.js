@@ -12,7 +12,7 @@ let data = {
   ]
 }
 let options = {
-  fullWidth: true,
+  fullWidth: false,
   chartPadding: {
     left: 0,
     right: 0
@@ -27,8 +27,8 @@ let options = {
     showGrid: false
   },
   axisY: {
-    showLabel: true,
-    showGrid: true
+    showLabel: false,
+    showGrid: false
   }
 }
 
