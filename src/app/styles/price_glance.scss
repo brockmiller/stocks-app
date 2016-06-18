@@ -1,9 +1,10 @@
+@import '_theme.scss';
 
 .container {
-  border: 2px solid rgba(white, 0.25);
+  border: 2px solid $swan-silver;
   border-radius: 50%;
-  height: 25vw;
-  width: 25vw;
+  height: 27vw;
+  width: 27vw;
   padding: 0;
   margin: 15px auto;
   font-size: 2vw;
@@ -29,7 +30,7 @@
 }
 
 .currentPrice {
-  color: white;
+  color:  white;
   font-size: 1.8em;
 }
 

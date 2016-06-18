@@ -17,7 +17,7 @@ class ViewMain extends React.Component {
             priceTicks={dowData}/></Col>
           <Col xs><PriceGlance symbol='S&P 500' price={2071.22} deltaPrice={-6.77} deltaPercent={-0.33}
             priceTicks={spData}/></Col>
-          <Col xs><PriceGlance symbol='NASDAQ' price={4800.34} deltaPrice={-44.58} deltaPercent={-0.92}
+          <Col xs><PriceGlance symbol='NASDAQ' price={4800.34} deltaPrice={44.58} deltaPercent={-0.92}
             priceTicks={nasData}/></Col>
         </Row>
       </Grid>

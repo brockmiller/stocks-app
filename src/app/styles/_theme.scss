@@ -3,6 +3,25 @@
 $swan-blue: #4275F4;
 $swan-blue-dark: rgba(66,101,188,1);
 $dark-blue-gray: rgba(67,92,102,1);
+$swan-silver: rgba(240, 240, 240, 1);
+
+
+
+// overrides
+$color-primary: $swan-silver;
+$color-primary-dark: $swan-blue-dark; //$palette-indigo-900;
+$color-background: $swan-blue-dark;
+$color-accent: $palette-green-a200; //$palette-teal-a400;
+$color-accent-dark: $palette-green-a200; //$palette-green-a200; //$palette-teal-a700;
+
+// defaults
+$color-divider: $palette-grey-200 !default;
+$color-text: $palette-grey-900 !default;
+$color-text-secondary: $palette-grey-600 !default;
+
+$color-primary-contrast: $color-dark-contrast !default;
+$color-accent-contrast: $color-dark-contrast !default;
+
 
 :export {
   swanBlue: $swan-blue;
@@ -15,19 +34,9 @@ $dark-blue-gray: rgba(67,92,102,1);
   red100: $palette-red-100;
   redA100: $palette-red-a100;
   redA200: $palette-red-a200;
+
+  primary: $color-primary;
+  primaryDark: $color-primary-dark;
+  background: $color-background;
+
 }
-
-// overrides
-$color-primary: $palette-indigo-a700;
-$color-primary-dark: $swan-blue-dark; //$palette-indigo-900;
-$color-background: $palette-blue-grey-50;
-$color-accent: $palette-teal-a400;
-$color-accent-dark: $palette-teal-a700;
-
-// defaults
-$color-divider: $palette-grey-200 !default;
-$color-text: $palette-grey-900 !default;
-$color-text-secondary: $palette-grey-600 !default;
-
-$color-primary-contrast: $color-dark-contrast !default;
-$color-accent-contrast: $color-dark-contrast !default;

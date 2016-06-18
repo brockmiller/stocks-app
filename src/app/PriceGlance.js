@@ -7,7 +7,7 @@ import { lt, first } from 'lodash'
 
 const PriceDelta = (props) => {
   let isNegative = lt(props.value, 0)
-  let priceStyle = { color: isNegative ? theme.redA100 : theme.greenA100 }
+  let priceStyle = { color: isNegative ? theme.redA100 : theme.greenA200 }
 
   return (
     <span className={styles.deltaPrice} style={priceStyle}>{props.value}{props.units}</span>
