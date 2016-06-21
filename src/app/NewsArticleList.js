@@ -26,9 +26,9 @@ class NewsArticleList extends React.Component {
           rightIcon='star'
         />
         <ListSubHeader caption='Configuration' />
-          <ListCheckbox checked caption='Notify new comics' legend='You will receive a notification when a new one is published' />
-          <ListDivider />
-          <ListItem caption='Contact the publisher' leftIcon='send' />
+        <ListCheckbox checked caption='Notify new comics' legend='You will receive a notification when a new one is published' />
+        <ListDivider />
+        <ListItem caption='Contact the publisher' leftIcon='send' />
         <ListItem caption='Remove this publication' leftIcon='delete' />
       </List>
     )

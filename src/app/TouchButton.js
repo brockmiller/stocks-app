@@ -11,7 +11,7 @@ TouchButton.propTypes = {
 };
 
 const TouchIconButton = ({ children, ...props }) => (
-  <IconButton {...props} theme={theme}>{children}</IconButton>
+  <IconButton {...props} theme={theme} className={theme.button}>{children}</IconButton>
 )
 
 TouchIconButton.propTypes = {
