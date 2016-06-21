@@ -3,6 +3,7 @@ import StockChart from './StockChart'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 import PriceGlance from './PriceGlance'
 import styles from './styles/view_main.scss';
+import NewsArticleList from './NewsArticleList'
 
 let spData = [2073.92,2073.78,2074.02,2069.91,2068.69,2068.26,2064.95,2063.38,2066.46,2066.04,2070.74,2070.09,2069.12,2067.76,2068.94,2069.88,2070.32,2070.83,2070.49,2072.14,2074.25,2073.49,2072.43,2071.64,2070.79,2071.22]
 let dowData =[17704.82,17702.08,17710.36,17674.38,17666.57,17653.45,17625.31,17607.37,17636.5,17631.06,17668.76,17667.08,17659.82,17652.63,17662.22,17665.37,17670.44,17674.72,17674.1,17686.29,17703.45,17701.91,17690.02,17680.61,17679.75,17674.68]
@@ -19,6 +20,10 @@ class ViewMain extends React.Component {
             priceTicks={spData}/></Col>
           <Col xs><PriceGlance symbol='NASDAQ' price={4800.34} deltaPrice={44.58} deltaPercent={-0.92}
             priceTicks={nasData}/></Col>
+        </Row>
+
+        <Row center="lg">
+          <NewsArticleList />
         </Row>
       </Grid>
     )

@@ -29,10 +29,11 @@ class AppContainer extends React.Component {
         <NavDrawer active={this.state.navDrawerOpen}
           onOverlayClick={this.toggleDrawer}>
         </NavDrawer>
-        <Panel>
-          <AppBar flat theme={appBarTheme}>
+        <Panel scrollY>
+          <AppBar flat fixed theme={appBarTheme}>
             <TouchButton mini floating accent icon="menu" onClick={this.toggleDrawer}></TouchButton>
           </AppBar>
+
           <ViewMain />
 
         </Panel>

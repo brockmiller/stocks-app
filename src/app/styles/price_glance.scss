@@ -1,18 +1,19 @@
 @import '_theme.scss';
 
 .container {
-  border: 2px solid $swan-silver;
+  border: 3px solid $color-divider;
   border-radius: 50%;
   height: 27vw;
   width: 27vw;
   padding: 0;
   margin: 15px auto;
   font-size: 2vw;
-  color: white;
+  color: $color-text;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 
 .sparkline {
@@ -26,11 +27,11 @@
 }
 
 .price {
-  color: white;
+  color:$color-text;
 }
 
 .currentPrice {
-  color:  white;
+  color: $color-text;
   font-size: 1.8em;
 }
 
