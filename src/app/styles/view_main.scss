@@ -5,4 +5,15 @@
   padding: 0;
   position: relative;
   top: 60px;
+
+  overflow: hidden;
+}
+
+.glances {
+  color: white;
+  background-color: $swan-amzn-gray;
+}
+
+.list {
+  overflow-y: scroll;
 }
