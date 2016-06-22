@@ -32,12 +32,7 @@ class AppContainer extends React.Component {
         <AppBar flat fixed theme={appBarTheme}>
           <TouchIconButton inverse icon="menu" onClick={this.toggleDrawer}></TouchIconButton>
         </AppBar>
-        <Panel>
-
-
-          <ViewMain />
-
-        </Panel>
+        <ViewMain />
       </Layout>
     );
   }

@@ -1,7 +1,7 @@
 @import '_theme.scss';
 
 .appBar {
-  height: 60px;
+  height: $nav-bar-height;
   padding-left: 5px;
   background-color: $color-primary-dark;
 

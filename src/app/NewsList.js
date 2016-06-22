@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { List, ListItem, ListSubHeader, ListDivider, ListCheckbox } from 'react-toolbox/lib/list';
 import styles from './styles/news_list.scss'
 
-class NewsArticleList extends React.Component {
+class NewsList extends React.Component {
 
   render () {
     return (
@@ -26,4 +26,4 @@ class NewsArticleList extends React.Component {
   }
 }
 
-export default NewsArticleList;
+export default NewsList;

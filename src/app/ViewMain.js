@@ -13,20 +13,18 @@ let nasData = [4823.134,4818.55,4818.304,4808.807,4803.937,4803.717,4795.131,479
 class ViewMain extends React.Component {
   render() {
     return (
-      <Grid fluid style={{ margin: 0}} className={styles.grid}>
-        <Row center="xs" className={styles.glances}>
-          <Col xs><PriceGlance symbol='DOW' price={17675.16} deltaPrice={-57.94} deltaPercent={-0.33}
-            priceTicks={dowData}/></Col>
-          <Col xs><PriceGlance symbol='S&P 500' price={2071.22} deltaPrice={-6.77} deltaPercent={-0.33}
-            priceTicks={spData}/></Col>
-          <Col xs><PriceGlance symbol='NASDAQ' price={4800.34} deltaPrice={44.58} deltaPercent={-0.92}
-            priceTicks={nasData}/></Col>
-        </Row>
+      <Panel className={styles.panel}>
+        <div className={styles.glances}>
+          <PriceGlance symbol='DOW' price={17675.16} deltaPrice={-57.94} deltaPercent={-0.33}
+            priceTicks={dowData}/>
+          <PriceGlance symbol='S&P 500' price={2071.22} deltaPrice={-6.77} deltaPercent={-0.33}
+            priceTicks={spData}/>
+          <PriceGlance symbol='NASDAQ' price={4800.34} deltaPrice={44.58} deltaPercent={-0.92}
+            priceTicks={nasData}/>
+        </div>
 
-        <Row center="lg" className={styles.list}>
-          <NewsList />
-        </Row>
-      </Grid>
+        <NewsList />
+      </Panel>
     )
   }
 }

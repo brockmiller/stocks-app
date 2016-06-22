@@ -1,5 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+var precss       = require('precss');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: './src/app/main.js',
@@ -38,7 +40,7 @@ module.exports = {
       {
         test: /(\.scss|\.css)$/,
         include: /chartist/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader!postcss-loader')
       }
     ]
   },
@@ -47,5 +49,8 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('bundle.css', { allChunks: true })
-  ]
+  ],
+  postcss: function () {
+    return [precss, autoprefixer];
+  }
 };
