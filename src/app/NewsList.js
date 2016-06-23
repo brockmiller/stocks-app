@@ -20,6 +20,11 @@ class NewsList extends React.Component {
           <ListDivider />
           <ListItem caption='Contact the publisher' leftIcon='send' />
           <ListItem caption='Remove this publication' leftIcon='delete' />
+          <ListItem caption='Remove this publication' leftIcon='delete' />
+          <ListItem caption='Remove this publication' leftIcon='delete' />
+          <ListItem caption='Remove this publication' leftIcon='delete' />
+          <ListItem caption='Remove this publication' leftIcon='delete' />
+          <ListItem caption='Remove this publication' leftIcon='delete' />
         </List>
       </div>
     )

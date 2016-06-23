@@ -2,6 +2,7 @@
 
 .panel {
   top: $nav-bar-height;
+  flex: 1;
 }
 
 .glances {
@@ -16,5 +17,5 @@
   justify-content: space-around;
   align-items: center;
 
-  flex-shrink: 0;
+  flex: 0 0 auto;
 }
