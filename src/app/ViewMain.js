@@ -13,8 +13,8 @@ let nasData = [4823.134,4818.55,4818.304,4808.807,4803.937,4803.717,4795.131,479
 class ViewMain extends React.Component {
   render() {
     return (
-      <div className={styles.panel}>
-        <div className={styles.glances}>
+      <div className={styles.viewMain}>
+        <div className={styles.priceGlanceContainer}>
           <PriceGlance symbol='DOW' price={17675.16} deltaPrice={-57.94} deltaPercent={-0.33}
             priceTicks={dowData}/>
           <PriceGlance symbol='S&P 500' price={2071.22} deltaPrice={-6.77} deltaPercent={-0.33}
@@ -23,10 +23,9 @@ class ViewMain extends React.Component {
             priceTicks={nasData}/>
         </div>
 
-        {/*<div style={{flex: 1, minHeight: 0, overflow: 'auto'}}>*/}
-        // can't get scrollbar to show up!!!!
-        <NewsList/>
-        {/*</div>*/}
+        <div className={styles.newsListContainer}>
+          <NewsList/>
+        </div>
       </div>
     )
   }

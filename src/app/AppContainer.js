@@ -30,8 +30,8 @@ class AppContainer extends React.Component {
           onOverlayClick={this.toggleDrawer}>
         </NavDrawer>
 
-        <Panel>
-          <AppBar flat theme={appBarTheme}>
+        <Panel scrollY>
+          <AppBar fixed flat theme={appBarTheme}>
             <TouchIconButton inverse icon="menu" onClick={this.toggleDrawer}></TouchIconButton>
           </AppBar>
           <ViewMain />

@@ -1,4 +1,17 @@
+@import '_theme.scss';
 
 .list {
-  // overflow-y: scroll;
+  background-color: black;
+}
+
+.listItem {
+  white-space: normal;
+  margin: 10px 0;
+
+  span {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
 }

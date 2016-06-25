@@ -44,3 +44,27 @@ $color-accent-contrast: $palette-orange-200 !default;
 }
 
 $nav-bar-height: 60px;
+$glances-height: 27vw;
+
+
+.list {
+  margin: 0;
+}
+
+.listItem {
+  white-space: normal;
+  margin: 2.5px 0;
+
+  .itemText {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: left;
+  }
+}
+
+.subheader {
+  line-height: 3rem;
+  background-color: $swan-silver;
+}
