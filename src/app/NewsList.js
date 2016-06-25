@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { List, ListItem, ListSubHeader, ListDivider, ListCheckbox } from 'react-toolbox/lib/list';
-import styles from './styles/_theme.scss'
+import styles from './styles/news_list.scss'
 import moment from 'moment'
 import 'moment-timezone'
 
@@ -59,7 +59,7 @@ function formatTime(t) {
 class NewsList extends React.Component {
   render () {
     return (
-      <List selectable ripple>
+      <List selectable ripple theme={styles}>
         <ListSubHeader caption='Top News Stories' theme={styles}/>
         {
           newsItems.map((item) =>
