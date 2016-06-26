@@ -1,15 +1,10 @@
 // React
 import React from 'react';
-
-import { merge } from 'lodash/fp';
 import { Layout, NavDrawer, Panel, AppBar } from 'react-toolbox';
-import { IconMenu, MenuItem, MenuDivider } from 'react-toolbox';
 import { TouchIconButton } from './TouchButton';
-import styles from './styles/app_container.scss';
+import styles from './styles/nav_main.scss';
 
-import ViewMain from './ViewMain';
-
-class AppContainer extends React.Component {
+class NavMain extends React.Component {
   constructor() {
     super();
 
@@ -34,11 +29,11 @@ class AppContainer extends React.Component {
           <AppBar fixed flat theme={styles}>
             <TouchIconButton inverse icon="menu" onClick={this.toggleDrawer}></TouchIconButton>
           </AppBar>
-          <ViewMain />
+          {this.props.children}
         </Panel>
       </Layout>
     );
   }
 }
 
-export default AppContainer
+export default NavMain
