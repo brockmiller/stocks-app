@@ -5,7 +5,7 @@ import { merge } from 'lodash/fp';
 import { Layout, NavDrawer, Panel, AppBar } from 'react-toolbox';
 import { IconMenu, MenuItem, MenuDivider } from 'react-toolbox';
 import { TouchIconButton } from './TouchButton';
-import appBarTheme from './styles/app_bar.scss';
+import styles from './styles/app_container.scss';
 
 import ViewMain from './ViewMain';
 
@@ -26,12 +26,12 @@ class AppContainer extends React.Component {
   render() {
     return (
       <Layout>
-        <NavDrawer active={this.state.navDrawerOpen}
+        <NavDrawer active={this.state.navDrawerOpen} theme={styles}
           onOverlayClick={this.toggleDrawer}>
         </NavDrawer>
 
         <Panel scrollY>
-          <AppBar fixed flat theme={appBarTheme}>
+          <AppBar fixed flat theme={styles}>
             <TouchIconButton inverse icon="menu" onClick={this.toggleDrawer}></TouchIconButton>
           </AppBar>
           <ViewMain />
