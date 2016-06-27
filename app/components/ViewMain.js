@@ -3,7 +3,7 @@ import StockChart from './StockChart'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 import PriceTicker from './PriceTicker'
 import styles from '../styles/view_main.scss';
-import NewsList from './NewsList'
+import NewsListContainer from '../components/containers/NewsListContainer'
 import { Layout, NavDrawer, Panel, AppBar } from 'react-toolbox';
 
 class ViewMain extends React.Component {
@@ -11,9 +11,7 @@ class ViewMain extends React.Component {
     return (
       <div className={styles.viewMain}>
         <PriceTicker />
-        <div className={styles.newsListContainer}>
-          <NewsList/>
-        </div>
+        <NewsListContainer className={styles.newsListContainer} />
       </div>
     )
   }
