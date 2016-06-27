@@ -8,7 +8,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
     'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
-    './src/app/main.js'
+    './app/main.js'
   ],
   output: {
     path: './www',
@@ -48,7 +48,7 @@ module.exports = {
     ]
   },
   sassLoader: {
-    data: '@import "' + path.resolve(__dirname, 'src/app/styles/_theme.scss') + '";'
+    data: '@import "' + path.resolve(__dirname, 'app/styles/_theme.scss') + '";'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import StockChart from './StockChart'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 import PriceGlance from './PriceGlance'
-import styles from './styles/view_main.scss';
+import styles from '../styles/view_main.scss';
 import NewsList from './NewsList'
 import { Layout, NavDrawer, Panel, AppBar } from 'react-toolbox';
 

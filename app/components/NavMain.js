@@ -2,7 +2,7 @@
 import React from 'react';
 import { Layout, NavDrawer, Panel, AppBar } from 'react-toolbox';
 import { TouchIconButton } from './TouchButton';
-import styles from './styles/nav_main.scss';
+import styles from '../styles/nav_main.scss';
 
 class NavMain extends React.Component {
   constructor() {
@@ -27,7 +27,7 @@ class NavMain extends React.Component {
 
         <Panel scrollY>
           <AppBar fixed flat theme={styles}>
-            <TouchIconButton inverse icon="menu" onClick={this.toggleDrawer}></TouchIconButton>
+            <TouchIconButton ripple inverse icon="menu" onClick={this.toggleDrawer}></TouchIconButton>
           </AppBar>
           {this.props.children}
         </Panel>

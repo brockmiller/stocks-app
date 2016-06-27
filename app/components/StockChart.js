@@ -53,3 +53,11 @@ class StockChart extends React.Component {
 }
 
 export default StockChart
+
+const StockChartView = (props) => {
+  return (
+    <StockChart name="wowzer" />
+  )
+}
+
+export { StockChartView }
