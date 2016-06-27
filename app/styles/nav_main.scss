@@ -6,3 +6,7 @@
   background-color: $color-primary-dark;
   flex: 0 0 auto;
 }
+
+.scrim {
+  z-index: 301 !important;
+}
