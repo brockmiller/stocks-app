@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 import { Sparklines, SparklinesLine, SparklinesSpots, SparklinesReferenceLine } from 'react-sparklines';
-import styles from '../styles/price_glance.scss'
+import styles from '../styles/price_tick.scss'
 import theme from '../styles/_theme.scss'
 import { lt, first } from 'lodash'
 
@@ -19,7 +19,7 @@ PriceDelta.PropTypes = {
   units: PropTypes.string
 }
 
-class PriceGlance extends React.Component {
+class PriceTick extends React.Component {
   render() {
     return (
       <div className={styles.container}>
@@ -45,7 +45,7 @@ class PriceGlance extends React.Component {
   }
 }
 
-PriceGlance.PropTypes = {
+PriceTick.PropTypes = {
   symbol: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   deltaPrice: PropTypes.number,
@@ -53,4 +53,4 @@ PriceGlance.PropTypes = {
   priceTicks: PropTypes.array
 }
 
-export default PriceGlance;
+export default PriceTick;

@@ -1,0 +1,17 @@
+@import '_theme.scss';
+
+.priceTicker {
+  height: $glances-height;
+  position: relative;
+  top: $nav-bar-height;
+  margin: 0;
+  padding: 5px;
+
+  color: white;
+  background-color: $swan-amzn-gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex: 0 0 auto;
+}
