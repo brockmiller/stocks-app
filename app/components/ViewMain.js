@@ -10,7 +10,7 @@ class ViewMain extends React.Component {
   render() {
     return (
       <div className={styles.viewMain}>
-        <PriceTickerContainer symbols={['DOW', 'S&P 500', 'NASDAQ']}/>
+        <PriceTickerContainer />
         <NewsListContainer />
       </div>
     )

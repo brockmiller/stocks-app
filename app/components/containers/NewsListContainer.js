@@ -63,9 +63,11 @@ const news = [
     }
   ]
 
+// google news top stories:  https://news.google.com/news?cf=all&hl=en&ned=us&topic=b&output=rss&num=30
+// company news by symbol (rss): https://www.google.com/finance/company_news?q=OPWR&output=rss
 
 function refreshNewsItems() {
-  store.dispatch(getNewsSuccess([sample(news), sample(news), sample(news)]))
+  store.dispatch(getNewsSuccess(news))
 }
 
 class NewsListContainer extends React.Component {
@@ -85,7 +87,7 @@ class NewsListContainer extends React.Component {
 
 const mapStateToProps = function(store) {
   return {
-    news: store.newsState.news
+    news: store.newsData.news
   };
 };
 

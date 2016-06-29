@@ -30,7 +30,8 @@
     "react-sparklines": "^1.5.2",
     "react-tap-event-plugin": "^1.0.0",
     "react-toolbox": "^1.0.0",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",

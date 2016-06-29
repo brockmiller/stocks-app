@@ -6,7 +6,7 @@ import priceReducer from './price'
 
 // Combine Reducers
 var reducers = combineReducers({
-  newsState: newsReducer,
+  newsData: newsReducer,
   priceData: priceReducer
 });
 
