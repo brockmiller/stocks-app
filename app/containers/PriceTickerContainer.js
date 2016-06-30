@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react'
-import store from '../../store'
-import { fetchPriceQuote } from '../../actions/price-actions'
+import store from '../store'
+import { fetchPriceQuote } from '../actions/price'
 import { connect } from 'react-redux'
 import { compact } from 'lodash'
-import PriceTicker from '../PriceTicker'
+import PriceTicker from '../components/PriceTicker'
 
 
 function startPricingForSymbols() {

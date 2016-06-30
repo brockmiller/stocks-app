@@ -1,8 +1,7 @@
 import React, { PropTypes } from 'react'
-import NewsList from '../../components/NewsList'
-import styles from '../../styles/view_main.scss';
-import store from '../../store'
-import { getNewsSuccess } from '../../actions/news-actions'
+import NewsList from '../components/NewsList'
+import store from '../store'
+import { getNewsSuccess } from '../actions/news'
 import { sample } from 'lodash'
 import { connect } from 'react-redux'
 
@@ -76,12 +75,7 @@ class NewsListContainer extends React.Component {
   }
 
   render() {
-    return (
-      <div className={styles.newsListContainer}>
-        <NewsList newsItems={this.props.news} />
-      </div>
-
-    );
+    return <NewsList newsItems={this.props.news} />
   }
 }
 

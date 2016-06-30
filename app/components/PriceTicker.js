@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import PriceTick from './PriceTick'
 import styles from '../styles/price_ticker.scss'
 

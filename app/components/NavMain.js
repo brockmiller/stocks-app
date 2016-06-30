@@ -5,8 +5,8 @@ import { TouchIconButton } from './TouchButton';
 import styles from '../styles/nav_main.scss';
 
 class NavMain extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       navDrawerOpen: false
@@ -25,7 +25,7 @@ class NavMain extends React.Component {
           onOverlayClick={this.toggleDrawer}>
         </NavDrawer>
 
-        <Panel>
+        <Panel theme={styles}>
           <AppBar fixed flat theme={styles}>
             <TouchIconButton ripple inverse icon="menu" onClick={this.toggleDrawer}></TouchIconButton>
           </AppBar>

@@ -1,4 +1,4 @@
-import * as types from './action-types'
+import * as types from './types'
 import { getCurrentPrice } from '../services/stock-market'
 
 export function getPriceQuoteSuccess(symbol, priceData) {

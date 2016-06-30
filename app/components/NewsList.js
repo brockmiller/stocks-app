@@ -1,6 +1,6 @@
-import React, { PropTypes } from 'react'
-import { List, ListItem, ListSubHeader, ListDivider, ListCheckbox } from 'react-toolbox/lib/list';
-import Avatar from 'react-toolbox/lib/avatar';
+import React from 'react'
+import { List, ListItem, ListSubHeader, ListDivider } from 'react-toolbox/lib/list';
+import { Avatar } from 'react-toolbox/lib/avatar';
 import styles from '../styles/news_list.scss'
 import moment from 'moment'
 import 'moment-timezone'
@@ -12,20 +12,22 @@ function formatTime(t) {
 
 const NewsList = (props) => {
   return (
-    <List selectable ripple theme={styles}>
-      <ListSubHeader caption='Top News Stories' theme={styles}/>
-      {
-        props.newsItems.map((item) =>
-          <ListItem
-            avatar={<Avatar title={item.source} image={resolveOrNahSourceLogoByName(item.source)} />}
-            caption={item.title}
-            key={item.title}
-            legend={formatTime(item.pubDate)}
-            rightIcon=''
-            theme={styles}
-          />
-      )}
-    </List>
+    <div className={styles.container}>
+      <List selectable ripple theme={styles}>
+        <ListSubHeader caption='Top News Stories' theme={styles}/>
+        {
+          props.newsItems.map((item) =>
+            <ListItem
+              avatar={<Avatar title={item.source} image={resolveOrNahSourceLogoByName(item.source)} />}
+              caption={item.title}
+              key={item.title}
+              legend={formatTime(item.pubDate)}
+              rightIcon=''
+              theme={styles}
+            />
+        )}
+      </List>
+    </div>
   )
 }
 

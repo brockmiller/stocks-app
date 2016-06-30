@@ -1,9 +1,8 @@
 import React, { PropTypes } from 'react'
-import { Grid, Row, Col } from 'react-flexbox-grid'
 import { Sparklines, SparklinesLine, SparklinesSpots, SparklinesReferenceLine } from 'react-sparklines';
 import styles from '../styles/price_tick.scss'
 import theme from '../styles/_theme.scss'
-import { lt, first } from 'lodash'
+import { lt } from 'lodash'
 
 const PriceDelta = (props) => {
   let isNegative = lt(props.value, 0)
