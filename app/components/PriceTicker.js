@@ -9,7 +9,7 @@ const PriceTicker = (props) => {
       {
         props.items.map((item) => {
           return (
-            <PriceTick symbol={item.symbol} key={item.symbol} price={item.price} deltaPrice={item.deltaPrice} deltaPercent={item.deltaPercent}
+            <PriceTick symbol={item.Symbol} key={item.Symbol} name={item.Name} price={item.LastPrice} deltaPrice={item.Change} deltaPercent={item.ChangePercent}
               priceTicks={item.priceHistory}/>
           )
         })

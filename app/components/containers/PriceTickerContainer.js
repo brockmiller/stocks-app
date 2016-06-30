@@ -17,7 +17,7 @@ function startPricingForSymbols() {
 class PriceTickerContainer extends React.Component {
 
   componentWillMount() {
-    startPricingForSymbols(symbols)
+    startPricingForSymbols()
   }
 
   render () {

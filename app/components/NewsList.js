@@ -4,7 +4,6 @@ import Avatar from 'react-toolbox/lib/avatar';
 import styles from '../styles/news_list.scss'
 import moment from 'moment'
 import 'moment-timezone'
-import axios from 'axios'
 
 
 function formatTime(t) {
@@ -35,15 +34,5 @@ export default NewsList;
 function resolveOrNahSourceLogoByName(source) {
   let url = 'https://logo.clearbit.com/' + (source.split(' ').join('').split(':')[0]).toLowerCase() + '.com'
 
-  axios.get(url)
-    .then(function(response) {
-      console.log(response)
-    })
-    .catch(function(err) {
-      console.error('fuck you and your err', err)
-      url = null
-      return null
-    })
-
-    return url
+  return url
 }

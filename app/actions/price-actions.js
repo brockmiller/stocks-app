@@ -1,5 +1,5 @@
 import * as types from './action-types'
-import axios from 'axios'
+import { getCurrentPrice } from '../services/stock-market'
 
 export function getPriceQuoteSuccess(symbol, priceData) {
   return {
@@ -24,7 +24,7 @@ export function fetchPriceQuote(symbol) {
   return (dispatch) => {
     dispatch(getPriceQuoteRequest(symbol))
 
-    return axios.get(quoteUrl(symbol))
-      .then((response) => console.log(response.data))
+    return getCurrentPrice(symbol)
+      .then((result) => dispatch(getPriceQuoteSuccess(symbol, result)))
   }
 }
