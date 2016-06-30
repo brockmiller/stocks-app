@@ -4,6 +4,7 @@
   height: $glances-height;
   position: relative;
   top: $nav-bar-height;
+  width: 2000px;
   margin: 0;
   padding: 5px;
 
@@ -14,4 +15,5 @@
   justify-content: space-around;
   align-items: center;
   flex: 0 0 auto;
+  overflow-x: scroll;
 }

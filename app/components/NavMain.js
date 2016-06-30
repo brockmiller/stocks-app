@@ -25,7 +25,7 @@ class NavMain extends React.Component {
           onOverlayClick={this.toggleDrawer}>
         </NavDrawer>
 
-        <Panel scrollY>
+        <Panel>
           <AppBar fixed flat theme={styles}>
             <TouchIconButton ripple inverse icon="menu" onClick={this.toggleDrawer}></TouchIconButton>
           </AppBar>

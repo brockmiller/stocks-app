@@ -1,7 +1,29 @@
 import * as types from '../actions/action-types';
 
 const initialState = {
-  tickerSymbols: ['DOW', 'S&P 500', 'NASDAQ'],
+  tickerSymbols: [
+    "FB",
+    "AMZN",
+    "GOOGL",
+    "CSCO",
+    "AAPL",
+    "TSLA",
+    "NFLX",
+    "MSFT",
+    "PANW",
+    "BRK-B",
+    "BABA",
+    "BIDU",
+    "TWTR",
+    "YHOO",
+    "VOO",
+    "NOBL",
+    "SSO",
+    "VXX",
+    "SDS",
+    "SPY",
+    "QQQ"
+  ],
   priceQuoteBySymbol: {}
 }
 
