@@ -26,7 +26,7 @@ const PriceTick = (props) => {
       {props.symbol}
       <div className={styles.sparkline}>
         <Sparklines data={props.priceTicks} margin={8}>
-          <SparklinesLine color={theme.orange200} style={{ fill: "none", strokeWidth: 3 }} />
+          <SparklinesLine color={theme.orange200} style={{ fill: 'none', strokeWidth: 3 }} />
           <SparklinesReferenceLine
             style={{stroke: theme.darkBlueGray, strokeOpacity: 0.5, strokeWidth: 2, strokeDasharray: '2, 2'}}
             value={0}

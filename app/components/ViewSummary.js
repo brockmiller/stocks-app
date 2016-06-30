@@ -14,4 +14,4 @@ class ViewSummary extends React.Component {
   }
 }
 
-export default ViewSummary;;
+export default ViewSummary;
