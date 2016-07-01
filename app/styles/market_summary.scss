@@ -1,10 +1,9 @@
 @import '_theme.scss';
 
-.priceTicker {
+.container {
   height: $glances-height;
   position: relative;
   top: $nav-bar-height;
-  width: 2000px;
   margin: 0;
   padding: 5px;
 

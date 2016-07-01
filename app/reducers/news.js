@@ -1,14 +1,14 @@
 import * as types from '../actions/types';
 
 const initialState = {
-  news: []
+  headlines: []
 };
 
 const newsReducer = function(state = initialState, action) {
 
   switch(action.type) {
     case types.GET_NEWS_SUCCESS:
-      return Object.assign({}, state, { news: action.news });
+      return { ...state, headlines: action.news };
   }
 
   return state;

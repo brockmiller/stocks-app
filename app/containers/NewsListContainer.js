@@ -81,7 +81,7 @@ class NewsListContainer extends React.Component {
 
 const mapStateToProps = function(store) {
   return {
-    news: store.newsData.news
+    news: store.news.headlines
   };
 };
 
