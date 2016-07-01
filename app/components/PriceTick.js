@@ -4,7 +4,6 @@ import styles from '../styles/price_tick.scss'
 import theme from '../styles/_theme.scss'
 
 const PriceDelta = (props) => {
-  console.log(styles)
   let textColor;
   if (props.value < 0) {
     textColor = theme.redA100

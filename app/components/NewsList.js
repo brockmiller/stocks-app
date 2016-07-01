@@ -18,12 +18,12 @@ const NewsList = (props) => {
         {
           props.newsItems.map((item) =>
             <ListItem
-              avatar={<Avatar title={item.source} image={resolveOrNahSourceLogoByName(item.source)} />}
               caption={item.title}
               key={item.title}
-              legend={formatTime(item.pubDate)}
+              legend={`${item.source} - ${formatTime(item.pubDate)}`}
               rightIcon=''
               theme={styles}
+              to={item.link}
             />
         )}
       </List>
@@ -34,7 +34,7 @@ const NewsList = (props) => {
 export default NewsList;
 
 function resolveOrNahSourceLogoByName(source) {
-  let url = 'https://logo.clearbit.com/' + (source.split(' ').join('').split(':')[0]).toLowerCase() + '.com'
-
-  return url
+  // let url = 'https://logo.clearbit.com/' + (source.split(' ').join('').split(':')[0]).toLowerCase() + '.com'
+  //
+  // return url
 }

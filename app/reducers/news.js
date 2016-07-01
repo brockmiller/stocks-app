@@ -7,7 +7,7 @@ const initialState = {
 const newsReducer = function(state = initialState, action) {
 
   switch(action.type) {
-    case types.GET_NEWS_SUCCESS:
+    case types.GET_NEWS_HEADLINES_SUCCESS:
       return { ...state, headlines: action.news };
   }
 
