@@ -4,13 +4,17 @@ import styles from '../styles/watch_list_item.scss'
 import theme from '../styles/_theme.scss'
 import { lt } from 'lodash'
 
+function toFixedOrNah(value) {
+  return value ? value.toFixed(2) : '--'
+}
+
 const PriceDelta = (props) => {
   let isNegative = lt(props.value, 0)
   let bgStyle = { backgroundColor: isNegative ? theme.redA100 : theme.greenA200 }
 
   return (
     <span className={styles.deltaPrice} style={bgStyle}>
-      { props.value ? props.value.toFixed(2) : '-' }{props.units}
+      {toFixedOrNah(props.value)}{props.units}
     </span>
   )
 }
@@ -41,7 +45,7 @@ const WatchListItem = (props) => {
       </div>
       <div className={styles.priceInfo}>
         <span className={styles.currentPrice}>
-          { props.LastPrice ? props.LastPrice.toFixed(2) : '--' }
+          {toFixedOrNah(props.LastPrice)}
         </span>
         <PriceDelta value={props.ChangePercent} units='%' />
       </div>

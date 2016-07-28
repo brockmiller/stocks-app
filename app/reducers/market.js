@@ -25,9 +25,6 @@ const tickerSymbols = [
   'QQQ'
 ]
 
-const initialWatchList = {
-  current: ['FB', 'AAPL', 'AMZN', 'NFLX']
-}
 const initialPriceBySymbol = {
   FB: {
     "Name": "DOW",
@@ -69,17 +66,13 @@ const initialPriceBySymbol = {
   }
 }
 
-const watchListReducer = function(state = initialWatchList, action) {
-  return state
-}
 
-const priceReducer = function(state = initialPriceBySymbol, action) {
+const quoteReducer = function(state = initialPriceBySymbol, action) {
   let newState;
   switch(action.type) {
     case types.GET_PRICE_QUOTE_REQUEST:
-      // newState.priceBySymbol[action.symbol] = { ...currentQuote, Symbol: action.symbol, isFetching: true }
       newState = { ...state }
-      newState[action.symbol] = newState[action.symbol] || {}
+      newState[action.symbol] = newState[action.symbol] || { Symbol: action.symbol }
       newState[action.symbol].isFetching = true
       return newState
     case types.GET_PRICE_QUOTE_SUCCESS:
@@ -92,8 +85,7 @@ const priceReducer = function(state = initialPriceBySymbol, action) {
 
 
 const marketReducer = combineReducers({
-  priceBySymbol: priceReducer,
-  watchList: watchListReducer
+  quotes: quoteReducer
 })
 
 

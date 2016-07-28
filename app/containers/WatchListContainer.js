@@ -7,7 +7,6 @@ import { connect } from 'react-redux'
 
 class WatchListContainer extends React.Component {
   componentWillMount() {
-    console.log('inside componentWillMount')
     store.dispatch(refreshWatchListItems())
   }
 
@@ -16,11 +15,9 @@ class WatchListContainer extends React.Component {
   }
 }
 
-const mapStateToProps = function(store) {
-  console.log('inside mapStateToProps')
+const mapStateToProps = (state) => {
   return {
-    symbols: store.market.watchList.current,
-    items: store.market.watchList.current.map((symbol) => store.market.priceBySymbol[symbol])
+    items: state.user.watchList.map((symbol) => state.market.quotes[symbol])
   }
 }
 

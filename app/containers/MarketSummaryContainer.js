@@ -22,7 +22,7 @@ class MarketSummaryContainer extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    indexes: MARKET_INDEX_SYMBOLS.map((sym) => state.market.priceBySymbol[sym] || {}),
+    indexes: MARKET_INDEX_SYMBOLS.map((sym) => state.market.quotes[sym] || {}),
     status: state.market.status
   }
 }

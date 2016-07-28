@@ -13,7 +13,7 @@ const WatchList = (props) => {
         {
           props.items.map((item) =>
             <WatchListItem
-              key={item['Symbol']}
+              key={item.Symbol}
               {...item}
             />
           )

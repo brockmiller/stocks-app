@@ -28,8 +28,7 @@ export function fetchPriceQuote(symbol) {
 
 export function refreshWatchListItems() {
   return (dispatch, getState) => {
-    let watchList = get(getState(), 'market.watchList.current', ['FB'])
-    console.log(watchList)
+    let watchList = get(getState(), 'user.watchList', [])
     watchList.forEach((symbol) => dispatch(fetchPriceQuote(symbol)))
   }
 }
