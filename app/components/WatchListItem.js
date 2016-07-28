@@ -24,7 +24,7 @@ const WatchListItem = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles.companyInfo}>
-        <h2>{props.Symbol}</h2>
+        <h3>{props.Symbol}</h3>
         {props.Name}
       </div>
       <div className={styles.sparkline}>
@@ -40,10 +40,10 @@ const WatchListItem = (props) => {
         </Sparklines>
       </div>
       <div className={styles.priceInfo}>
-        <div className={styles.currentPrice}>
+        <span className={styles.currentPrice}>
           { props.LastPrice ? props.LastPrice.toFixed(2) : '--' }
-        </div>
-        <PriceDelta value={props.Change} /> (<PriceDelta value={props.ChangePercent} units='%' />)
+        </span>
+        <PriceDelta value={props.ChangePercent} units='%' />
       </div>
     </div>
   )
