@@ -27,42 +27,42 @@ const tickerSymbols = [
 
 const initialPriceBySymbol = {
   FB: {
-    "Name": "DOW",
-    "Symbol": "FB",
-    "LastPrice": 17567,
-    "Change": 0.620000000000005,
-    "ChangePercent": 0.648535564853561,
-    "Timestamp": "Fri Jul 1 12:03:19 UTC-04:00 2016",
-    "MarketCap": 527037833500,
-    "Volume": 1264859,
-    "ChangeYTD": 105.26,
-    "ChangePercentYTD": -8.58825764772944
+    'Name': 'DOW',
+    'Symbol': 'FB',
+    'LastPrice': 17567,
+    'Change': 0.620000000000005,
+    'ChangePercent': 0.648535564853561,
+    'Timestamp': 'Fri Jul 1 12:03:19 UTC-04:00 2016',
+    'MarketCap': 527037833500,
+    'Volume': 1264859,
+    'ChangeYTD': 105.26,
+    'ChangePercentYTD': -8.58825764772944
   },
   AAPL: {
-    "Name": "S&P 500",
-    "Symbol": "AAPL",
-    "LastPrice": 2104.51,
-    "Change": 5.38,
-    "ChangePercent": 0.26,
-    "Timestamp": "Fri Jul 1 12:03:19 UTC-04:00 2016",
-    "MSDate": 42552.5023032437,
-    "MarketCap": 527037833500,
-    "Volume": 1264859,
-    "ChangeYTD": 105.26,
-    "ChangePercentYTD": -8.58825764772944
+    'Name': 'S&P 500',
+    'Symbol': 'AAPL',
+    'LastPrice': 2104.51,
+    'Change': 5.38,
+    'ChangePercent': 0.26,
+    'Timestamp': 'Fri Jul 1 12:03:19 UTC-04:00 2016',
+    'MSDate': 42552.5023032437,
+    'MarketCap': 527037833500,
+    'Volume': 1264859,
+    'ChangeYTD': 105.26,
+    'ChangePercentYTD': -8.58825764772944
   },
   AMZN: {
-    "Name": "NASDAQ",
-    "Symbol": "AMZN",
-    "LastPrice": 4868.24,
-    "Change": 25.50,
-    "ChangePercent": 0.53,
-    "Timestamp": "Fri Jul 1 12:03:19 UTC-04:00 2016",
-    "MSDate": 42552.5023032437,
-    "MarketCap": 527037833500,
-    "Volume": 1264859,
-    "ChangeYTD": 105.26,
-    "ChangePercentYTD": -8.58825764772944
+    'Name': 'NASDAQ',
+    'Symbol': 'AMZN',
+    'LastPrice': 4868.24,
+    'Change': 25.50,
+    'ChangePercent': 0.53,
+    'Timestamp': 'Fri Jul 1 12:03:19 UTC-04:00 2016',
+    'MSDate': 42552.5023032437,
+    'MarketCap': 527037833500,
+    'Volume': 1264859,
+    'ChangeYTD': 105.26,
+    'ChangePercentYTD': -8.58825764772944
   }
 }
 
