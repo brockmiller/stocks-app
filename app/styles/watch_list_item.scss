@@ -1,0 +1,41 @@
+@import '_theme.scss';
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7.5px;
+  margin-top: 2.5px 0 0;
+
+  // color: $swan-amzn-gray; //white;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $swan-amzn-gray;
+
+}
+
+.sparkline {
+  margin: 5% 1%;
+  height: auto;
+
+  > svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.priceInfo {
+}
+
+.currentPrice {
+  // color: white;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.deltaPrice {
+  color: silver;
+  font-size: 1.25rem;
+}

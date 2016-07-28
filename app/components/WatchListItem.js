@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { Sparklines, SparklinesLine, SparklinesSpots, SparklinesReferenceLine } from 'react-sparklines';
-import styles from '../styles/price_tick.scss'
+import styles from '../styles/watch_list_item.scss'
 import theme from '../styles/_theme.scss'
 import { lt } from 'lodash'
 
@@ -20,10 +20,13 @@ PriceDelta.PropTypes = {
   units: PropTypes.string
 }
 
-const PriceTick = (props) => {
+const WatchListItem = (props) => {
   return (
     <div className={styles.container}>
-      {props.symbol}
+      <div className={styles.companyInfo}>
+        <h2>{props.Symbol}</h2>
+        {props.Name}
+      </div>
       <div className={styles.sparkline}>
         <Sparklines data={props.priceTicks} margin={8}>
           <SparklinesLine color={theme.orange200} style={{ fill: 'none', strokeWidth: 3 }} />
@@ -36,17 +39,17 @@ const PriceTick = (props) => {
             style={{ stroke: theme.orange100, strokeWidth: 3, fill: theme.swanBlueDark }}/>
         </Sparklines>
       </div>
-      <div className={styles.price}>
+      <div className={styles.priceInfo}>
         <div className={styles.currentPrice}>
-          ${ props.price ? props.price.toFixed(2) : '--' }
+          { props.LastPrice ? props.LastPrice.toFixed(2) : '--' }
         </div>
-        <PriceDelta value={props.deltaPrice} /> / <PriceDelta value={props.deltaPercent} units='%' />
+        <PriceDelta value={props.Change} /> (<PriceDelta value={props.ChangePercent} units='%' />)
       </div>
     </div>
   )
 }
 
-PriceTick.PropTypes = {
+WatchListItem.PropTypes = {
   symbol: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   deltaPrice: PropTypes.number,
@@ -54,4 +57,4 @@ PriceTick.PropTypes = {
   priceTicks: PropTypes.array
 }
 
-export default PriceTick;
+export default WatchListItem;
