@@ -26,10 +26,10 @@ const tickerSymbols = [
 ]
 
 const initialWatchList = {
-  current: ['FB', 'AAPL', 'AMZN']
+  current: ['FB', 'AAPL', 'AMZN', 'NFLX']
 }
 const initialPriceBySymbol = {
-  'FB': {
+  FB: {
     "Name": "DOW",
     "Symbol": "FB",
     "LastPrice": 17567,
@@ -41,7 +41,7 @@ const initialPriceBySymbol = {
     "ChangeYTD": 105.26,
     "ChangePercentYTD": -8.58825764772944
   },
-  'AAPL': {
+  AAPL: {
     "Name": "S&P 500",
     "Symbol": "AAPL",
     "LastPrice": 2104.51,
@@ -54,7 +54,7 @@ const initialPriceBySymbol = {
     "ChangeYTD": 105.26,
     "ChangePercentYTD": -8.58825764772944
   },
-  'AMZN': {
+  AMZN: {
     "Name": "NASDAQ",
     "Symbol": "AMZN",
     "LastPrice": 4868.24,
@@ -78,14 +78,12 @@ const priceReducer = function(state = initialPriceBySymbol, action) {
   switch(action.type) {
     case types.GET_PRICE_QUOTE_REQUEST:
       // newState.priceBySymbol[action.symbol] = { ...currentQuote, Symbol: action.symbol, isFetching: true }
-      newState = { ...state, [action.symbol]: {isFetching: true} }
-      console.log(state)
-      console.log(newState)
+      newState = { ...state }
+      newState[action.symbol] = newState[action.symbol] || {}
+      newState[action.symbol].isFetching = true
       return newState
     case types.GET_PRICE_QUOTE_SUCCESS:
       newState = { ...state, [action.symbol]: { ...action.data, isFetching: false} }
-      console.log(state)
-      console.log(newState)
       return newState
   }
 

@@ -1,19 +1,24 @@
 @import '_theme.scss';
 
 .container {
-  width: 100%;
   box-sizing: border-box;
-  padding: 7.5px;
-  margin-top: 2.5px 0 0;
-
-  // color: $swan-amzn-gray; //white;
+  padding: 5px;
+  margin: 3px;
+  border: 1px solid rgba($swan-amzn-gray, 0.2);
+  color: $swan-amzn-gray; //white;
 
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: $swan-amzn-gray;
+  background-color: white;
 
+}
+
+.companyInfo {
+  h2 {
+    margin: 5px 0;
+  }
 }
 
 .sparkline {
@@ -30,12 +35,16 @@
 }
 
 .currentPrice {
-  // color: white;
   font-size: 1.75rem;
   margin-right: 16px;
 }
 
 .deltaPrice {
-  color: silver;
-  font-size: 1.25rem;
+  display: inline-block;
+  color: white;
+  font-size: 1.5rem;
+  background-color: rgba($swan-amzn-gray, 0.5);
+  padding: 5px;
+  width: 3.5em;
+  text-align: right;
 }

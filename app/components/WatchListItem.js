@@ -6,10 +6,10 @@ import { lt } from 'lodash'
 
 const PriceDelta = (props) => {
   let isNegative = lt(props.value, 0)
-  let priceStyle = { color: isNegative ? theme.redA100 : theme.greenA200 }
+  let bgStyle = { backgroundColor: isNegative ? theme.redA100 : theme.greenA200 }
 
   return (
-    <span className={styles.deltaPrice} style={priceStyle}>
+    <span className={styles.deltaPrice} style={bgStyle}>
       { props.value ? props.value.toFixed(2) : '-' }{props.units}
     </span>
   )
@@ -24,7 +24,7 @@ const WatchListItem = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles.companyInfo}>
-        <h3>{props.Symbol}</h3>
+        <h2>{props.Symbol}</h2>
         {props.Name}
       </div>
       <div className={styles.sparkline}>
