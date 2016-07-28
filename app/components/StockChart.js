@@ -18,7 +18,7 @@ let options = {
     right: 0
   },
   lineSmooth: Chartist.Interpolation.cardinal({
-    fillHoles: true,
+    fillHoles: true
   }),
   showPoint: false,
   low: 0,

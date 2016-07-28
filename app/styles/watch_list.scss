@@ -1,11 +1,16 @@
 @import '_theme.scss';
 
-
 .container {
   position: relative;
-  width: 100%;
-  // overflow-y: scroll;
-  // overflow-x: hidden;
+  margin: 0;
+  color: white;
+  background-color: $swan-silver;
+
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
+  // align-items: center;
+  // flex: 0 0 auto;
 }
 
 .list {
@@ -14,7 +19,7 @@
 
 .listItem {
   white-space: normal;
-  margin: 10px 0;
+  // margin: 2px 0;
 }
 
 [data-react-toolbox="list-item-text"] {
@@ -24,7 +29,13 @@
   -webkit-box-orient: vertical;
 }
 
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+
 .subheader {
   line-height: 3rem;
   background-color: $swan-silver;
+
 }

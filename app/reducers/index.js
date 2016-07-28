@@ -2,12 +2,12 @@ import { combineReducers } from 'redux';
 
 // Reducers
 import newsReducer from './news';
-import priceReducer from './price'
+import marketReducer from './market'
 
 // Combine Reducers
 var reducers = combineReducers({
-  newsData: newsReducer,
-  priceData: priceReducer
+  news: newsReducer,
+  market: marketReducer
 });
 
 export default reducers;

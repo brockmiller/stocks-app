@@ -1,18 +1,16 @@
 // React
 import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router'
-import NavMain from './components/NavMain';
-import ViewMain from './components/ViewMain';
+import NavMain from '../components/NavMain';
+import ViewSummary from '../components/ViewSummary';
 import { hashHistory } from 'react-router'
-import { StockChartView } from './components/StockChart'
 
 class App extends React.Component {
   render() {
     return (
       <Router history={hashHistory}>
         <Route path="/" component={NavMain}>
-          <IndexRoute component={ViewMain} />
-          <Route path="stocks" component={StockChartView} />
+          <IndexRoute component={ViewSummary} />
         </Route>
       </Router>
     )

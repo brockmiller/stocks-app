@@ -1,5 +1,6 @@
-import * as types from './action-types'
+import * as types from './types'
 import { getCurrentPrice } from '../services/stock-market'
+import { get } from 'lodash'
 
 export function getPriceQuoteSuccess(symbol, priceData) {
   return {
@@ -16,15 +17,19 @@ export function getPriceQuoteRequest(symbol) {
   }
 }
 
-function quoteUrl(symbol) {
-  return `https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22${symbol}%22)&format=json&env=http%3A%2F%2Fdatatables.org%2Falltables.env&callback=`
-}
-
 export function fetchPriceQuote(symbol) {
   return (dispatch) => {
     dispatch(getPriceQuoteRequest(symbol))
 
     return getCurrentPrice(symbol)
       .then((result) => dispatch(getPriceQuoteSuccess(symbol, result)))
+  }
+}
+
+export function refreshWatchListItems() {
+  return (dispatch, getState) => {
+    let watchList = get(getState(), 'market.watchList.current', ['FB'])
+    console.log(watchList)
+    watchList.forEach((symbol) => dispatch(fetchPriceQuote(symbol)))
   }
 }
