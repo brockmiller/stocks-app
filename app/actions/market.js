@@ -1,5 +1,6 @@
 import * as types from './types'
 import { getCurrentPrice } from '../services/stock-market'
+import { get } from 'lodash'
 
 export function getPriceQuoteSuccess(symbol, priceData) {
   return {
@@ -22,5 +23,13 @@ export function fetchPriceQuote(symbol) {
 
     return getCurrentPrice(symbol)
       .then((result) => dispatch(getPriceQuoteSuccess(symbol, result)))
+  }
+}
+
+export function refreshWatchListItems() {
+  return (dispatch, getState) => {
+    let watchList = get(getState(), 'market.watchList.current', ['FB'])
+    console.log(watchList)
+    watchList.forEach((symbol) => dispatch(fetchPriceQuote(symbol)))
   }
 }

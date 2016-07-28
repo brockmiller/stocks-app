@@ -15,7 +15,7 @@ export function getNewsHeadlinesRequest() {
 }
 
 function extractYQLNewsItems(data) {
-  return
+  // return
 }
 
 export function refreshNewsHeadlines() {
