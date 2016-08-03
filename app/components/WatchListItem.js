@@ -2,18 +2,20 @@ import React, { PropTypes } from 'react'
 import { Sparklines, SparklinesLine, SparklinesSpots, SparklinesReferenceLine } from 'react-sparklines';
 import styles from '../styles/watch_list_item.scss'
 import theme from '../styles/_theme.scss'
-import { lt } from 'lodash'
+import { lt, gt } from 'lodash'
+import classNames from 'classnames'
 
 function toFixedOrNah(value) {
   return value ? value.toFixed(2) : '--'
 }
 
 const WatchListItemPriceDelta = (props) => {
-  let isNegative = lt(props.value, 0)
-  let bgStyle = { backgroundColor: isNegative ? theme.redA100 : theme.greenA200 }
+  const isNegative = lt(props.value, 0)
+  const isPositive = gt(props.value, 0)
+  let cName = classNames(styles.deltaPrice, { [styles.positive]: isPositive, [styles.negative]: isNegative })
 
   return (
-    <span className={styles.deltaPrice} style={bgStyle}>
+    <span className={cName}>
       {toFixedOrNah(props.value)}{props.units}
     </span>
   )

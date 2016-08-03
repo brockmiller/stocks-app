@@ -48,3 +48,11 @@
   width: 3.5em;
   text-align: right;
 }
+
+.positive {
+  background-color: $palette-green-a200;
+}
+
+.negative {
+  background-color: $palette-red-a100;
+}
