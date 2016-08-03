@@ -6,6 +6,10 @@ import WatchListItem from './WatchListItem'
 
 
 const WatchList = (props) => {
+  const deltaUnits = props.deltaUnitsAsPercentage ?
+    { fieldName: 'ChangePercent', label: '%' } :
+    { fieldName: 'Change', label: null }
+
   return (
     <div className={styles.container}>
       <List selectable ripple theme={styles}>
@@ -15,6 +19,9 @@ const WatchList = (props) => {
             <WatchListItem
               key={item.Symbol}
               {...item}
+              delta={item[deltaUnits.fieldName]}
+              deltaUnits={deltaUnits.label}
+              onDeltaUnitsToggle={props.onDeltaUnitsToggle}
             />
           )
         }

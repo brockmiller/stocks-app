@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import WatchList from '../components/WatchList'
 import store from '../store'
 import { refreshWatchListItems } from '../actions/market'
+import { toggleDeltaPriceUnits } from '../actions/user'
 import { compact } from 'lodash'
 import { connect } from 'react-redux'
 
@@ -11,14 +12,23 @@ class WatchListContainer extends React.Component {
   }
 
   render() {
-    return <WatchList items={compact(this.props.items)} />
+    return <WatchList {...this.props} />
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    items: state.user.watchList.map((symbol) => state.market.quotes[symbol])
+    items: compact(state.user.watchList.map((symbol) => state.market.quotes[symbol])),
+    deltaUnitsAsPercentage: state.user.prefs.deltaUnitsAsPercentage
   }
 }
 
-export default connect(mapStateToProps)(WatchListContainer);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onDeltaUnitsToggle: () => {
+      dispatch(toggleDeltaPriceUnits())
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(WatchListContainer);
