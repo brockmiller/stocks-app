@@ -3,7 +3,11 @@ import { List, ListItem, ListSubHeader, ListDivider } from 'react-toolbox/lib/li
 import { Avatar } from 'react-toolbox/lib/avatar';
 import styles from '../styles/watch_list.scss'
 import WatchListItem from './WatchListItem'
+import { shuffle } from 'lodash'
 
+const priceTicks = [
+  100, 101, 102, 104, 102, 103, 102, 103, 104, 103, 102, 101, 102, 103
+]
 
 const WatchList = (props) => {
   const deltaUnits = props.deltaUnitsAsPercentage ?
@@ -22,6 +26,7 @@ const WatchList = (props) => {
               delta={item[deltaUnits.fieldName]}
               deltaUnits={deltaUnits.label}
               onDeltaUnitsToggle={props.onDeltaUnitsToggle}
+              priceTicks={shuffle(priceTicks)}
             />
           )
         }

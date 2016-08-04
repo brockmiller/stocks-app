@@ -5,7 +5,7 @@
   padding: 5px;
   margin: 3px;
   border: 1px solid rgba($swan-amzn-gray, 0.2);
-  color: $swan-amzn-gray; //white;
+  color: rgba($swan-amzn-gray, 0.8); //white;
 
   display: flex;
   flex-flow: row nowrap;
@@ -16,14 +16,16 @@
 }
 
 .companyInfo {
+  min-width: 110px;
+
   h2 {
+    font-size: 2.25rem;
     margin: 5px 0;
   }
 }
 
 .sparkline {
-  margin: 5% 1%;
-  height: auto;
+  margin: 4% 2%;
 
   > svg {
     width: 100%;
@@ -36,7 +38,7 @@
 
 .currentPrice {
   font-size: 1.75rem;
-  margin-right: 16px;
+  margin-right: 8px;
 }
 
 .deltaPrice {
