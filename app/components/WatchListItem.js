@@ -37,7 +37,7 @@ class WatchListItem extends React.Component {
         </div>
         <div className={styles.sparkline}>
           <Sparklines data={this.props.priceTicks} margin={2}>
-            <SparklinesLine color={theme.orange200} style={{ fill: 'none', strokeWidth: 3 }} />
+            <SparklinesLine color={theme.orange200} style={{ fill: 'none', strokeWidth: 5 }} />
           </Sparklines>
         </div>
         <div className={styles.priceInfo} onClick={this.props.onDeltaUnitsToggle}>
