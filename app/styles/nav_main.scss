@@ -3,18 +3,14 @@
 .appBar {
   height: $nav-bar-height;
   padding-left: 5px;
-  background-color: $color-primary-dark;
+  background-color: $swan-amzn-gray; //$color-primary-dark;
   flex: 0 0 auto;
-}
-
-.scrim {
-  z-index: 301 !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .panel {
   overflow: hidden;
-}
-
-.drawerContent {
-  box-shadow: none !important;
 }
