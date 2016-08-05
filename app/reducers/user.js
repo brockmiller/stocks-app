@@ -29,7 +29,7 @@ function prefsReducer(state = initialState.prefs, action) {
 
 const userReducer = combineReducers({
   watchList: watchListReducer,
-  prefs: prefsReducer,
+  prefs: prefsReducer
 })
 
 export default userReducer
