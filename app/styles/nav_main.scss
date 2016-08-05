@@ -12,5 +12,9 @@
 }
 
 .panel {
+  // position: relative;
   overflow: hidden;
+  bottom: $nav-bar-height;
+  display: block !important;
+
 }

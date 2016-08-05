@@ -1,7 +1,8 @@
 @import "_theme.scss";
 
 .container {
-  flex: 1;
-  height: 100%;
+  position: absolute;
+  top: $nav-bar-height + 40px;
+  bottom: 0;
   overflow-y: scroll;
 }

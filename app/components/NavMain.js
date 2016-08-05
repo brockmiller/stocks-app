@@ -11,13 +11,14 @@ class NavMain extends React.Component {
       <Layout>
         <Panel theme={styles}>
           {this.props.children}
+
           <AppBar flat theme={styles}>
             <Navigation type='horizontal' >
               <TouchIconButton icon='trending_up' accent />
               <TouchIconButton icon='view_headline' accent />
             </Navigation>
-
           </AppBar>
+
         </Panel>
       </Layout>
     );
