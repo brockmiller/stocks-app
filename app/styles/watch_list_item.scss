@@ -2,30 +2,40 @@
 
 .container {
   box-sizing: border-box;
-  padding: 5px;
-  margin: 3px;
-  border: 1px solid rgba($swan-amzn-gray, 0.2);
-  color: rgba($swan-amzn-gray, 0.8); //white;
+  padding: 5px 0 5px 5px;
+  margin: 0 5px 0 0;
+  color: rgba($swan-amzn-gray, 0.75); //white;
 
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  // background-color: white;
 
+
+  border-bottom: 1px solid rgba($swan-amzn-gray, 0.1);
+
+  &.positive {
+    border-left: 4px solid $palette-green-a200;
+  }
+
+  &.negative {
+    border-left: 4px solid $palette-red-a100;
+  }
 }
 
 .companyInfo {
   min-width: 100px;
 
   h2 {
-    font-size: 2.25rem;
+    font-size: 2.25 rem;
     margin: 5px 0;
   }
 }
 
 .sparkline {
   margin: 5% 5%;
+  max-width: 200px;
 
   > svg {
     width: 100%;
@@ -34,6 +44,8 @@
 }
 
 .priceInfo {
+  min-width: 150px;
+  text-align: right;
 }
 
 .currentPrice {
@@ -51,10 +63,10 @@
   text-align: right;
 }
 
-.positive {
+.positive .deltaPrice {
   background-color: $palette-green-a200;
 }
 
-.negative {
+.negative .deltaPrice {
   background-color: $palette-red-a100;
 }

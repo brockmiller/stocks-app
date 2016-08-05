@@ -4,8 +4,6 @@
 .container {
   position: relative;
   width: 100%;
-  // overflow-y: scroll;
-  // overflow-x: hidden;
 }
 
 .list {
@@ -27,4 +25,7 @@
 .subheader {
   line-height: 3rem;
   background-color: $swan-silver;
+  border-bottom: 1px solid rgba($swan-amzn-gray, 0.4);
+  font-size: 1.5rem;
+  border-radius: 0 0 5px 5px;
 }

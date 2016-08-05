@@ -9,42 +9,37 @@ function toFixedOrNah(value) {
   return value ? value.toFixed(2) : '--'
 }
 
-const WatchListItemPriceDelta = (props) => {
-  const isNegative = lt(props.value, 0)
-  const isPositive = gt(props.value, 0)
-  let cName = classNames(styles.deltaPrice, { [styles.positive]: isPositive, [styles.negative]: isNegative })
+function priceDirectionCssClass(priceDelta) {
+  const isNegative = lt(priceDelta, 0)
+  const isPositive = gt(priceDelta, 0)
 
-  return (
-    <span className={cName}>
-      {toFixedOrNah(props.value)}{props.units}
-    </span>
-  )
-}
-
-WatchListItemPriceDelta.PropTypes = {
-  value: PropTypes.number.isRequired,
-  units: PropTypes.string
+  return isNegative ?
+    styles.negative :
+    isPositive ?
+      styles.positive :
+      null
 }
 
 class WatchListItem extends React.Component {
-
   render() {
     return (
-      <div className={styles.container}>
+      <div className={classNames(styles.container, priceDirectionCssClass(this.props.delta))}>
         <div className={styles.companyInfo}>
           <h2>{this.props.Symbol}</h2>
           {this.props.Name}
         </div>
         <div className={styles.sparkline}>
           <Sparklines data={this.props.priceTicks} margin={2}>
-            <SparklinesLine color={theme.orange200} style={{ fill: 'none', strokeWidth: 5 }} />
+            <SparklinesLine xcolor={theme.orange200} style={{ fill: 'none', strokeWidth: 5 }} />
           </Sparklines>
         </div>
         <div className={styles.priceInfo} onClick={this.props.onDeltaUnitsToggle}>
           <span className={styles.currentPrice}>
             {toFixedOrNah(this.props.LastPrice)}
           </span>
-          <WatchListItemPriceDelta value={this.props.delta} units={this.props.deltaUnits} />
+          <span className={styles.deltaPrice}>
+            {toFixedOrNah(this.props.delta)}{this.props.deltaUnits}
+          </span>
         </div>
       </div>
     )
