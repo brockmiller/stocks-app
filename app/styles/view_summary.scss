@@ -2,7 +2,7 @@
 
 .container {
   position: absolute;
-  top: $nav-bar-height + 40px;
-  bottom: 0;
+  top: 0;
+  bottom: $nav-bar-height;
   overflow-y: scroll;
 }

@@ -1,16 +1,13 @@
 import React, { PropTypes } from 'react'
-import MarketSummaryContainer from '../containers/MarketSummaryContainer'
-import styles from '../styles/view_summary.scss';
-import NewsListContainer from '../containers/NewsListContainer'
+import viewSummaryStyle from '../styles/view_summary.scss';
 import WatchListContainer from '../containers/WatchListContainer'
+import TitleBarWithSearchContainer from '../containers/TitleBarWithSearchContainer'
 
 class ViewSummary extends React.Component {
   render() {
     return (
-      <div className={styles.container}>
-        {/*<MarketSummaryContainer />*/}
+      <div className={viewSummaryStyle.container}>
         <WatchListContainer />
-        <NewsListContainer />
       </div>
     )
   }

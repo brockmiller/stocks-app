@@ -13,7 +13,7 @@ class NavMain extends React.Component {
           {this.props.children}
 
           <AppBar flat theme={styles}>
-            <Navigation type='horizontal' >
+            <Navigation type='horizontal' theme={styles}>
               <TouchIconButton icon='trending_up' accent />
               <TouchIconButton icon='view_headline' accent />
             </Navigation>

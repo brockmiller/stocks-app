@@ -2,19 +2,19 @@
 
 .appBar {
   height: $nav-bar-height;
-  padding-left: 5px;
+  padding-left: 0;
+  padding-right: 0;
   background-color: $swan-amzn-gray; //$color-primary-dark;
+  position: absolute;
   flex: 0 0 auto;
-  position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+  justify-content: center;
 }
 
 .panel {
-  // position: relative;
-  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 0;
   bottom: $nav-bar-height;
-  display: block !important;
-
 }
