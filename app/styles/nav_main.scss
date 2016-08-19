@@ -9,7 +9,7 @@
   flex: 0 0 auto;
   bottom: 0;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .panel {
@@ -17,4 +17,29 @@
   width: 100%;
   top: 0;
   bottom: $nav-bar-height;
+}
+
+.horizontal {
+  height: 100%;
+  padding-bottom: 0;
+}
+
+.icon {
+  font-size: 36px;
+  color: white;
+  margin: 0;
+}
+
+.active {
+  border-bottom: 4px solid $color-accent;
+
+  .icon {
+    color: $color-accent;
+  }
+}
+
+.customLink.link {
+  height: 100%;
+  line-height: 36px;
+  opacity: 1;
 }
