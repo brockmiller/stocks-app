@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+[data-react-toolbox="button"] {
+  cursor: auto !important;
+}
+
 html {
   font-size: 12px;
 }

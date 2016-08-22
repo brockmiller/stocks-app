@@ -2,44 +2,33 @@
 
 .appBar {
   height: $nav-bar-height;
-  padding-left: 0;
-  padding-right: 0;
-  background-color: $swan-amzn-gray; //$color-primary-dark;
-  position: absolute;
+  padding-left: 5px;
   flex: 0 0 auto;
-  bottom: 0;
   width: 100%;
-  justify-content: space-around;
 }
 
-.panel {
-  position: absolute;
+.header {
+  height: $nav-bar-height;
   width: 100%;
-  top: 0;
-  bottom: $nav-bar-height;
+  color: $swan-blue-dark;
+  background-color: $swan-silver;
+  font-size: 32px;
+  line-height: 64px;
+  font-weight: bolder;
+  text-align: center;
 }
 
-.horizontal {
-  height: 100%;
-  padding-bottom: 0;
-}
-
-.icon {
-  font-size: 36px;
-  color: white;
-  margin: 0;
-}
-
-.active {
-  border-bottom: 4px solid $color-accent;
-
-  .icon {
-    color: $color-accent;
+.layout {
+  .navDrawer {
+    .drawerContent {
+      justify-content: flex-start;
+      width: 200px;
+      color: white;
+      // background-color: $swan-silver;
+    }
   }
 }
 
-.customLink.link {
-  height: 100%;
-  line-height: 36px;
-  opacity: 1;
+.button {
+  font-size: 20px;
 }
