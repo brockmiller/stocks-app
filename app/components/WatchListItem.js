@@ -5,7 +5,7 @@ import theme from '../styles/_theme.scss'
 import { lt, gt } from 'lodash'
 import classNames from 'classnames'
 
-function toFixedOrNah(value) {
+function toFixedTwo(value) {
   return value ? value.toFixed(2) : '--'
 }
 
@@ -35,10 +35,10 @@ class WatchListItem extends React.Component {
         </div>
         <div className={styles.priceInfo} onClick={this.props.onDeltaUnitsToggle}>
           <span className={styles.currentPrice}>
-            {toFixedOrNah(this.props.LastPrice)}
+            {toFixedTwo(this.props.LastPrice)}
           </span>
           <span className={styles.deltaPrice}>
-            {toFixedOrNah(this.props.delta)}{this.props.deltaUnits}
+            {toFixedTwo(this.props.delta)}{this.props.deltaUnits}
           </span>
         </div>
       </div>

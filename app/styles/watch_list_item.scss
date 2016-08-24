@@ -1,16 +1,13 @@
 @import '_theme.scss';
 
 .container {
-  box-sizing: border-box;
-  padding: 5px 0 5px 5px;
-  margin: 0 5px 0 0;
+  padding: 5px;
   color: rgba($swan-amzn-gray, 0.75); //white;
 
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  // background-color: white;
 
 
   border-bottom: 1px solid rgba($swan-amzn-gray, 0.1);
@@ -28,7 +25,7 @@
   min-width: 100px;
 
   h2 {
-    font-size: 2.25 rem;
+    font-size: 1.75rem;
     margin: 5px 0;
   }
 }

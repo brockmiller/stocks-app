@@ -38,7 +38,9 @@ class NavMain extends React.Component {
             <IconButton ripple inverse icon="menu" onClick={this.toggleDrawer}></IconButton>
           </AppBar>
 
-          {this.props.children}
+          <div className={navMainStyle.scrollableView}>
+            {this.props.children}
+          </div>
 
         </Panel>
       </Layout>

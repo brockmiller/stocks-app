@@ -6,17 +6,11 @@
   margin: 0;
   color: white;
   background-color: $swan-silver;
-
 }
 
 .list {
   margin: 0;
   padding-top: 0;
-}
-
-.listItem {
-  white-space: normal;
-  // margin: 2px 0;
 }
 
 [data-react-toolbox="list-item-text"] {
@@ -28,19 +22,4 @@
 
 a:-webkit-any-link {
   text-decoration: none;
-}
-
-
-.subheader {
-  box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 40px;
-  margin: 0;
-  line-height: 3.5rem;
-  background-color: $swan-silver;
-  border-bottom: 2px solid rgba($swan-amzn-gray, 0.4);
-  font-size: 1.75rem;
-  border-radius: 0 0 5px 5px;
 }

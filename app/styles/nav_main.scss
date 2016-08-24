@@ -1,7 +1,7 @@
 @import '_theme.scss';
 
 
-// classNames for navDrawer header
+// classNames for navDrawer header & scrollableView
 $header-spacing: 5px;
 .header {
   height: $nav-bar-height;
@@ -27,6 +27,12 @@ $header-spacing: 5px;
   padding: $header-spacing;
   border-top-right-radius: $header-spacing;
   border-bottom-right-radius: $header-spacing;
+}
+
+.scrollableView {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 // theme overrides for layout, navDrawer, and appBar

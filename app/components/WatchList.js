@@ -1,7 +1,7 @@
 import React from 'react'
 import { List, ListItem, ListSubHeader, ListDivider } from 'react-toolbox/lib/list';
 import { Avatar } from 'react-toolbox/lib/avatar';
-import styles from '../styles/watch_list.scss'
+import watchListStyles from '../styles/watch_list.scss'
 import WatchListItem from './WatchListItem'
 import { shuffle } from 'lodash'
 
@@ -15,8 +15,8 @@ const WatchList = (props) => {
     { fieldName: 'Change', label: null }
 
   return (
-    <div className={styles.container}>
-      <List selectable ripple theme={styles}>
+    <div className={watchListStyles.container}>
+      <List selectable ripple theme={watchListStyles}>
         {
           props.items.map((item) =>
             <WatchListItem
