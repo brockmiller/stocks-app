@@ -1,6 +1,6 @@
 // React
 import React from 'react';
-import { Layout, Navigation, NavDrawer, Panel, AppBar, Button, IconButton, Avatar } from 'react-toolbox';
+import { Layout, Navigation, NavDrawer, Panel, AppBar, FontIcon, Button, IconButton, Avatar } from 'react-toolbox';
 import navMainStyle from '../styles/nav_main.scss';
 
 class NavMain extends React.Component {
@@ -22,12 +22,14 @@ class NavMain extends React.Component {
       <Layout theme={navMainStyle}>
         <NavDrawer theme={navMainStyle} active={this.state.navDrawerOpen} onOverlayClick={this.toggleDrawer}>
           <div className={navMainStyle.header}>
-            STOCKS
+            <span className={navMainStyle.headerText}>tails</span>
+            <span className={navMainStyle.headerLogo}><FontIcon theme={navMainStyle} value='show_chart' /></span>
           </div>
 
-          <Navigation type='vertical'>
-            <Button theme={navMainStyle} ripple icon='trending_up' label='Watchlist' href='/#' />
-            <Button theme={navMainStyle} ripple icon='view_headline' label='Headlines' href='/#/news' />
+          <Navigation theme={navMainStyle} type='vertical'>
+            <Button primary theme={navMainStyle} ripple icon='trending_up' label='Watchlist' href='/#' />
+            <Button primary theme={navMainStyle} ripple icon='view_headline' label='Headlines' href='/#/news' />
+            <Button primary theme={navMainStyle} ripple icon='search' label='Search' href='/#/search' />
           </Navigation>
         </NavDrawer>
 

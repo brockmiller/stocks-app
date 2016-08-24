@@ -1,34 +1,63 @@
 @import '_theme.scss';
 
-.appBar {
-  height: $nav-bar-height;
-  padding-left: 5px;
-  flex: 0 0 auto;
-  width: 100%;
-}
 
+// classNames for navDrawer header
+$header-spacing: 5px;
 .header {
   height: $nav-bar-height;
   width: 100%;
-  color: $swan-blue-dark;
-  background-color: $swan-silver;
   font-size: 32px;
   line-height: 64px;
   font-weight: bolder;
   text-align: center;
+  margin: $header-spacing * 2 0
 }
 
+.headerText {
+  border: 2px solid white;
+  border-right: 1px solid white;
+  padding: $header-spacing;
+  border-top-left-radius: $header-spacing;
+  border-bottom-left-radius: $header-spacing;
+}
+
+.headerLogo {
+  border: 2px solid white;
+  border-left: 1px solid white;
+  padding: $header-spacing;
+  border-top-right-radius: $header-spacing;
+  border-bottom-right-radius: $header-spacing;
+}
+
+// theme overrides for layout, navDrawer, and appBar
 .layout {
   .navDrawer {
     .drawerContent {
       justify-content: flex-start;
       width: 200px;
       color: white;
-      // background-color: $swan-silver;
+      background-color: $swan-amzn-gray;
+      border-right: none;
+
+      nav {
+        padding-left: 0;
+        padding-right: 0;
+
+        .button {
+          font-size: 20px;
+          margin-right: 0;
+          margin-left: 0;
+          color: white;
+          text-align: left;
+        }
+      }
     }
   }
 }
 
-.button {
-  font-size: 20px;
+.appBar {
+  height: $nav-bar-height;
+  padding-left: 5px;
+  flex: 0 0 auto;
+  width: 100%;
 }
