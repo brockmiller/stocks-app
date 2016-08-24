@@ -17,7 +17,6 @@ const WatchList = (props) => {
   return (
     <div className={styles.container}>
       <List selectable ripple theme={styles}>
-        <ListSubHeader caption='Your Watchlist' theme={styles}/>
         {
           props.items.map((item) =>
             <WatchListItem

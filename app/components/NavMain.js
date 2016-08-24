@@ -1,8 +1,7 @@
 // React
 import React from 'react';
-import { Layout, NavDrawer, Panel, AppBar } from 'react-toolbox';
-import { TouchIconButton } from './TouchButton';
-import styles from '../styles/nav_main.scss';
+import { Layout, Navigation, NavDrawer, Panel, AppBar, FontIcon, Button, IconButton, Avatar } from 'react-toolbox';
+import navMainStyle from '../styles/nav_main.scss';
 
 class NavMain extends React.Component {
   constructor(props) {
@@ -20,16 +19,27 @@ class NavMain extends React.Component {
 
   render() {
     return (
-      <Layout>
-        <NavDrawer active={this.state.navDrawerOpen} theme={styles}
-          onOverlayClick={this.toggleDrawer}>
+      <Layout theme={navMainStyle}>
+        <NavDrawer theme={navMainStyle} active={this.state.navDrawerOpen} onOverlayClick={this.toggleDrawer}>
+          <div className={navMainStyle.header}>
+            <span className={navMainStyle.headerText}>tails</span>
+            <span className={navMainStyle.headerLogo}><FontIcon theme={navMainStyle} value='show_chart' /></span>
+          </div>
+
+          <Navigation theme={navMainStyle} type='vertical'>
+            <Button primary theme={navMainStyle} ripple icon='trending_up' label='Watchlist' href='/#' />
+            <Button primary theme={navMainStyle} ripple icon='view_headline' label='Headlines' href='/#/news' />
+            <Button primary theme={navMainStyle} ripple icon='search' label='Search' href='/#/search' />
+          </Navigation>
         </NavDrawer>
 
-        <Panel theme={styles}>
-          <AppBar fixed flat theme={styles}>
-            <TouchIconButton ripple inverse icon="menu" onClick={this.toggleDrawer}></TouchIconButton>
+        <Panel>
+          <AppBar theme={navMainStyle}>
+            <IconButton ripple inverse icon="menu" onClick={this.toggleDrawer}></IconButton>
           </AppBar>
+
           {this.props.children}
+
         </Panel>
       </Layout>
     );

@@ -2,7 +2,7 @@ import * as types from '../actions/types';
 import { combineReducers } from 'redux';
 
 const initialState = {
-  watchList: ['FB', 'AAPL', 'AMZN', 'NFLX', 'GOOGL', 'CSCO', 'TSLA'],
+  watchList: ['FB', 'AAPL', 'AMZN', 'NFLX', 'GOOGL', 'CSCO', 'TSLA', 'MSFT', 'TWLO', 'TWTR'],
   prefs: {
     deltaUnitsAsPercentage: true
   }

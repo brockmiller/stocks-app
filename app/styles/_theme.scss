@@ -9,8 +9,8 @@ $swan-amzn-gray: rgba(35,47,62, 1);
 
 // overrides
 $color-primary: $swan-blue;
-$color-primary-dark: $swan-blue-dark; //$palette-indigo-900;
-$color-background: white; //$swan-amzn-gray;
+$color-primary-dark: $swan-amzn-gray;
+// $color-background: white; //$swan-amzn-gray;
 $color-accent: $palette-green-a200; //$palette-teal-a400;
 $color-accent-dark: $palette-green-a200; //$palette-green-a200; //$palette-teal-a700;
 
@@ -41,7 +41,7 @@ $color-negative: $palette-red-a100;
 
   primary: $color-primary;
   primaryDark: $color-primary-dark;
-  background: $color-background;
+  // background: $color-background;
 
 }
 
