@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js --progress --inline --colors",
+    "start-dev": "webpack-dev-server --config webpack.config.js --progress --inline --colors",
     "lint": "./node_modules/.bin/eslint app",
-    "fixlint": "./node_modules/.bin/eslint app --fix"
+    "fixlint": "./node_modules/.bin/eslint app --fix",
+    "build-heroku": "webpack --config ./webpack.heroku.config.js --progress --colors",
+    "start": "node ./app.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +17,7 @@
     "babel-polyfill": "^6.9.1",
     "chartist": "^0.9.7",
     "classnames": "^2.2.5",
+    "express": "^4.14.0",
     "flexboxgrid": "^6.3.0",
     "jsonp": "^0.2.0",
     "lodash": "^4.13.1",
