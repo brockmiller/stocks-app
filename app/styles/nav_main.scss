@@ -35,6 +35,12 @@ $header-spacing: 5px;
   overflow-x: hidden;
 }
 
+.searchButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 // theme overrides for layout, navDrawer, and appBar
 .layout {
   .navDrawer {

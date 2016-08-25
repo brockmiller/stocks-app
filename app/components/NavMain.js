@@ -42,6 +42,8 @@ class NavMain extends React.Component {
             {this.props.children}
           </div>
 
+          <Button primary ripple floating icon='search' className={navMainStyle.searchButton} />
+
         </Panel>
       </Layout>
     );
