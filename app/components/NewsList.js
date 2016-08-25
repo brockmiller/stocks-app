@@ -3,12 +3,6 @@ import { List, ListItem, ListSubHeader, ListDivider } from 'react-toolbox/lib/li
 import { Avatar } from 'react-toolbox/lib/avatar';
 import newsListStyles from '../styles/news_list.scss'
 import moment from 'moment'
-import 'moment-timezone'
-
-
-function formatTime(t) {
-  return moment.tz(t, 'ddd, DD MMM YYYY HH:mm:ss', 'UTC').fromNow()
-}
 
 const NewsList = (props) => {
   return (
@@ -20,7 +14,7 @@ const NewsList = (props) => {
             <ListItem
               caption={item.title}
               key={item.title}
-              legend={`${item.source} - ${formatTime(item.pubDate)}`}
+              legend={`${item.source} - ${moment(item.moment).fromNow()}`}
               rightIcon=''
               theme={newsListStyles}
               to={item.link}
