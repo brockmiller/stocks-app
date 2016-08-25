@@ -4,15 +4,26 @@
 .container {
   position: relative;
   width: 100%;
+  background-color: $swan-silver;
 }
 
 .list {
   margin: 0;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  background-color: white;
 }
 
 .listItem {
   white-space: normal;
-  margin: 10px 0;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid rgba($swan-amzn-gray, 0.1);
+
+  .item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }
 
 [data-react-toolbox="list-item-text"] {
@@ -20,4 +31,9 @@
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+.subheader {
+  background-color: $swan-silver;
+  line-height: 3.5rem;
 }

@@ -32,9 +32,3 @@ const NewsList = (props) => {
 }
 
 export default NewsList;
-
-function resolveOrNahSourceLogoByName(source) {
-  // let url = 'https://logo.clearbit.com/' + (source.split(' ').join('').split(':')[0]).toLowerCase() + '.com'
-  //
-  // return url
-}
