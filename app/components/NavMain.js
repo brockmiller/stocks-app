@@ -23,7 +23,7 @@ class NavMain extends React.Component {
         <NavDrawer theme={navMainStyle} active={this.state.navDrawerOpen} onOverlayClick={this.toggleDrawer}>
           <div className={navMainStyle.header}>
             <span className={navMainStyle.headerText}>tails</span>
-            <span className={navMainStyle.headerLogo}><FontIcon theme={navMainStyle} value='show_chart' /></span>
+            <span className={navMainStyle.headerLogo}><FontIcon value='show_chart' /></span>
           </div>
 
           <Navigation theme={navMainStyle} type='vertical'>
@@ -42,7 +42,7 @@ class NavMain extends React.Component {
             {this.props.children}
           </div>
 
-          <Button primary ripple floating icon='search' className={navMainStyle.searchButton} />
+          <Button primary ripple floating mini icon='search' className={navMainStyle.searchButton} />
 
         </Panel>
       </Layout>
