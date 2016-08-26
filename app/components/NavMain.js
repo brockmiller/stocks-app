@@ -42,7 +42,7 @@ class NavMain extends React.Component {
             {this.props.children}
           </div>
 
-          <Button primary ripple floating mini icon='search' className={navMainStyle.searchButton} />
+          <Button primary ripple floating mini icon='search' theme={navMainStyle} />
 
         </Panel>
       </Layout>
