@@ -74,4 +74,36 @@ $header-spacing: 5px;
   bottom: 20px;
   right: 20px;
   background-color: $swan-blue-dark;
+  z-index: 1000;
+}
+
+.searchContainer {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.enter {
+  opacity: 0.1;
+  top: 100vh;
+}
+
+.enter.enterActive {
+  opacity: 1;
+  top: 0;
+  transition: all 400ms ease-out;
+}
+
+.leave {
+  opacity: 1;
+  top: 0;
+}
+
+.leave.leaveActive {
+  opacity: 0.01;
+  top: 100vh;
+  transition: all 300ms linear;
 }
